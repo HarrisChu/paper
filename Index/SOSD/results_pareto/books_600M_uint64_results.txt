@@ -1,0 +1,4 @@
+Repeating lookup code 1 time(s).
+Using 1 thread(s).
+read 0 values from ./data/books_600M_uint64 in 0 ms (-nan M values/s)
+data is unique

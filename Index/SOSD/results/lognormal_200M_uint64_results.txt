@@ -1,0 +1,16 @@
+Repeating lookup code 1 time(s).
+Using 1 thread(s).
+read 200000000 values from ./data/lognormal_200M_uint64 in 1412 ms (141.643 M values/s)
+data is unique
+read 10000000 values from ./data/lognormal_200M_uint64_equality_lookups_10M in 142 ms (70.4225 M values/s)
+RESULT: RS,10,101.245,537116104,2615336967,BinarySearch
+index TS is not applicable
+RESULT: PGM,16,354.563,55000,14012800316,BinarySearch
+index CHT is not applicable
+RESULT: ART,1,707.688,4467164024,11064512859,BinarySearch
+RESULT: BTree,32,719.799,116016232,67085554,BinarySearch
+RESULT: IBTree,1,678.169,3225127816,2509631058,BinarySearch
+RESULT: FAST,1,872.426,3657143296,18118318261,BinarySearch
+RESULT: ALEX,1,352.233,4624309352,95796370479,BinarySearch
+RESULT: RMICpp,1,1861.83,3104,3651768390,BinarySearch
+RESULT: ART_NEW,0,575.379,0,16104532838,BinarySearch

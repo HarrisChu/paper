@@ -1,0 +1,17 @@
+Repeating lookup code 1 time(s).
+Using 1 thread(s).
+read 800000000 values from ./data/osm_cellids_800M_uint64 in 5628 ms (142.146 M values/s)
+data is unique
+read 10000000 values from ./data/osm_cellids_800M_uint64_equality_lookups_10M in 138 ms (72.4638 M values/s)
+RESULT: RMI,0,559.579,402653216,0,BinarySearch
+RESULT: RS,10,575.802,4942173512,23770235923,BinarySearch
+index TS is not applicable
+RESULT: PGM,16,670.407,126815360,50127215755,BinarySearch
+index CHT is not applicable
+RESULT: ART,1,880.824,21667484536,63055321217,BinarySearch
+RESULT: BTree,32,903.854,464063600,1034029659,BinarySearch
+RESULT: IBTree,1,1189.98,12900498856,9985443561,BinarySearch
+RESULT: FAST,1,1081.35,14628571776,71125270202,BinarySearch
+RESULT: ALEX,1,906.122,18543083296,502293284860,BinarySearch
+RESULT: RMICpp,1,1948.18,3104,14916633570,BinarySearch
+RESULT: ART_NEW,0,683.067,0,85013957819,BinarySearch

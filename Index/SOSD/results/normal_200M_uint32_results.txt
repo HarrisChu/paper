@@ -1,0 +1,22 @@
+Repeating lookup code 1 time(s).
+Using 1 thread(s).
+read 200000000 values from ./data/normal_200M_uint32 in 721 ms (277.393 M values/s)
+data is unique
+read 10000000 values from ./data/normal_200M_uint32_equality_lookups_10M in 144 ms (69.4444 M values/s)
+RESULT: RS,10,174.11,268617084,2286084103,BinarySearch
+index TS is not applicable
+RESULT: PGM,16,344.22,31488,6952325899,BinarySearch
+index CHT is not applicable
+RESULT: BTree,32,685.072,87075880,86537349,BinarySearch
+RESULT: IBTree,1,534.538,2421989256,2235231069,BinarySearch
+RESULT: FAST,1,636.38,1706666880,11463097622,BinarySearch
+RESULT: ALEX,1,332.754,3464519800,39593845330,BinarySearch
+RESULT: RMICpp,1,835.889,3104,3581986707,BinarySearch
+RESULT: ART_NEW,0,358.637,0,14831665563,BinarySearch
+RESULT: START,0,222.269,0,68332341385,BinarySearch
+RESULT: FST,1,965.217,1853707551,17985534801,BinarySearch
+RESULT: FST,128,1456.36,14800249,119910923,BinarySearch
+RESULT: RBS,28,136.879,1073741828,1248167944,BinarySearch
+RESULT: CuckooMap,0,154.832,1616000000,47811473018,BinarySearch
+RESULT: RobinHash,0,121.99,6442450944,11700294326,BinarySearch
+RESULT: BinarySearch,0,992.479,0,0,BinarySearch

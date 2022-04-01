@@ -1,0 +1,21 @@
+Repeating lookup code 1 time(s).
+Using 1 thread(s).
+read 200000000 values from ./data/wiki_ts_200M_uint64 in 1415 ms (141.343 M values/s)
+data contains duplicates
+read 10000000 values from ./data/wiki_ts_200M_uint64_equality_lookups_10M in 140 ms (71.4286 M values/s)
+RESULT: RMI,0,247.734,402653216,0,BinarySearch
+RESULT: RS,10,333.768,897060824,4365371685,BinarySearch
+RESULT: TS,10,341.237,1133629284,10598675012,BinarySearch
+RESULT: PGM,16,403.423,4604720,6145046387,BinarySearch
+index CHT is not applicable
+index ART is not applicable
+RESULT: BTree,32,733.782,116016232,101102568,BinarySearch
+RESULT: IBTree,1,854.359,3225127816,2499281873,BinarySearch
+index FAST is not applicable
+RESULT: ALEX,1,427.086,4613272376,85430925072,BinarySearch
+RESULT: RMICpp,1,904.381,3104,3651746421,BinarySearch
+index FST is not applicable
+index FST is not applicable
+RESULT: RBS,28,203.057,1073741828,2088251500,BinarySearch
+RESULT: RobinHash,0,167.274,8589934592,8816422590,BinarySearch
+RESULT: BinarySearch,0,1001.92,0,0,BinarySearch

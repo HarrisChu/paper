@@ -1,0 +1,18 @@
+Repeating lookup code 1 time(s).
+Using 1 thread(s).
+read 200000000 values from ./data/uniform_sparse_200M_uint32 in 714 ms (280.112 M values/s)
+data contains duplicates
+read 10000000 values from ./data/uniform_sparse_200M_uint32_equality_lookups_10M in 143 ms (69.9301 M values/s)
+RESULT: RS,10,306.67,1092850956,6109021042,BinarySearch
+index TS is not applicable
+RESULT: PGM,16,355.641,3257968,7852124166,BinarySearch
+index CHT is not applicable
+RESULT: BTree,32,680.92,87075880,67762159,BinarySearch
+RESULT: IBTree,1,536.061,2421989256,2232252448,BinarySearch
+RESULT: ALEX,1,442.591,3464448392,30708954582,BinarySearch
+RESULT: RMICpp,1,469.199,3104,3588388768,BinarySearch
+index FST is not applicable
+index FST is not applicable
+RESULT: RBS,28,136.077,1073741828,2232170350,BinarySearch
+RESULT: RobinHash,0,125.439,6442450944,14392271382,BinarySearch
+RESULT: BinarySearch,0,1028.65,0,0,BinarySearch

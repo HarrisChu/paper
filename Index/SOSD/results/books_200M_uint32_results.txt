@@ -1,0 +1,23 @@
+Repeating lookup code 1 time(s).
+Using 1 thread(s).
+read 200000000 values from ./data/books_200M_uint32 in 721 ms (277.393 M values/s)
+data contains duplicates
+read 10000000 values from ./data/books_200M_uint32_equality_lookups_10M in 141 ms (70.922 M values/s)
+RESULT: RMI,0,254.717,402653216,0,BinarySearch
+RESULT: RS,10,307.493,1397279468,5079335752,BinarySearch
+index TS is not applicable
+RESULT: PGM,16,409.197,11703200,9557774331,BinarySearch
+index CHT is not applicable
+RESULT: BTree,32,689.29,87075880,61013120,BinarySearch
+RESULT: IBTree,1,673.105,2421989256,2222028602,BinarySearch
+RESULT: FAST,1,635.037,1706666880,11270426754,BinarySearch
+RESULT: ALEX,1,399.227,3464563660,66807477768,BinarySearch
+RESULT: RMICpp,1,881.713,3104,3583065124,BinarySearch
+RESULT: ART_NEW,0,314.336,0,14861471457,BinarySearch
+RESULT: START,0,218.618,0,64720065517,BinarySearch
+index FST is not applicable
+index FST is not applicable
+RESULT: RBS,28,165.613,1073741828,1573538434,BinarySearch
+RESULT: CuckooMap,0,151.758,1616000000,47778350332,BinarySearch
+RESULT: RobinHash,0,125.09,6442450944,10070481644,BinarySearch
+RESULT: BinarySearch,0,1027.93,0,0,BinarySearch

@@ -1,0 +1,4 @@
+Repeating lookup code 1 time(s).
+Using 1 thread(s).
+read 800000000 values from ./data/books_800M_uint64 in 7293 ms (109.694 M values/s)
+data is unique

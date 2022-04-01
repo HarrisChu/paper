@@ -1,0 +1,18 @@
+Repeating lookup code 1 time(s).
+Using 1 thread(s).
+read 200000000 values from ./data/lognormal_200M_uint32 in 718 ms (278.552 M values/s)
+data contains duplicates
+read 10000000 values from ./data/lognormal_200M_uint32_equality_lookups_10M in 143 ms (69.9301 M values/s)
+RESULT: RS,10,187.064,1074185532,1742108007,BinarySearch
+index TS is not applicable
+RESULT: PGM,16,391.965,35600,2689518412,BinarySearch
+index CHT is not applicable
+RESULT: BTree,32,660.952,87075880,86322230,BinarySearch
+RESULT: IBTree,1,651.289,2421989256,2222729954,BinarySearch
+RESULT: ALEX,1,383.519,3465055848,75251025648,BinarySearch
+RESULT: RMICpp,1,1552.14,3104,3583308417,BinarySearch
+index FST is not applicable
+index FST is not applicable
+RESULT: RBS,28,278.571,1073741828,1111748461,BinarySearch
+RESULT: RobinHash,0,659.25,12884901888,529882655453,BinarySearch
+RESULT: BinarySearch,0,993.725,0,0,BinarySearch

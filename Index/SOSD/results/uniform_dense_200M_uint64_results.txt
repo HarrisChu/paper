@@ -1,0 +1,22 @@
+Repeating lookup code 1 time(s).
+Using 1 thread(s).
+read 200000000 values from ./data/uniform_dense_200M_uint64 in 1425 ms (140.351 M values/s)
+data is unique
+read 10000000 values from ./data/uniform_dense_200M_uint64_equality_lookups_10M in 142 ms (70.4225 M values/s)
+RESULT: RS,10,167.481,800000132,2810113157,BinarySearch
+index TS is not applicable
+RESULT: PGM,16,127.87,460,15097810204,BinarySearch
+index CHT is not applicable
+RESULT: ART,1,404.96,1618824944,6462808025,BinarySearch
+RESULT: BTree,32,716.264,116016232,67140732,BinarySearch
+RESULT: IBTree,1,474.745,3225127816,2499701979,BinarySearch
+RESULT: FAST,1,856.881,3657143296,19261360499,BinarySearch
+RESULT: ALEX,1,350.869,4607268928,19398505689,BinarySearch
+RESULT: RMICpp,1,61.5978,3104,3649512592,BinarySearch
+RESULT: ART_NEW,0,249.241,0,18474499887,BinarySearch
+RESULT: START,0,174.929,0,41991002543,BinarySearch
+RESULT: FST,1,633.153,1653438897,20594908466,BinarySearch
+RESULT: FST,128,2196.13,14724237,151256311,BinarySearch
+RESULT: RBS,28,120.495,1073741828,1224444672,BinarySearch
+RESULT: RobinHash,0,107.641,8589934592,8038321097,BinarySearch
+RESULT: BinarySearch,0,986.664,0,0,BinarySearch
