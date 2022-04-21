@@ -29,7 +29,7 @@ Yahoo研发的大规模分布式存储之上提供事务功能的组件，最初
 
 从网上CRDB的技术讨论中得知，受到了A Critique of Snapshot Isolation这篇论文的启发，所以和Omid有一些同源, 同时学习Google的TrueTime的思路，搞了NTP+HLC混合时钟方案；
 
-以下载录了CRDB论坛的一段话：
+以下摘录了CRDB论坛的一段话：
 
 ```
 CockroachDB does not perform any locking during reads, only during writes. Instead, when performing reads CockroachDB bumps an in-memory data structure (backed by a concurrent skiplist) that records the largest timestamp of reads over arbitrary spans of rows. This “timestamp cache” is then consulted during write operations to prevent a write in a different transaction from invalidating a previous read at a higher timestamp. Remember that CockroachDB is an MVCC database, so reads and writes only interact if a write has a lower timestamp than a read. So the rules are that:
