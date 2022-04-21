@@ -1,11 +1,11 @@
 # 计算相关
 - 向量化
-	- clickhouse, 没有论文，不过很有多会议的presentation可以看， https://github.com/ClickHouse/clickhouse-presentations
+	- Clickhouse, 没有论文，不过很有多会议的presentation可以看， https://github.com/ClickHouse/clickhouse-presentations
 		- firebolt, clickhouse魔改版本， CMU Vaccination Database Tech Talks 讲Firebolt这期讲了不少细节，https://www.youtube.com/watch?v=9rW9uEJ15tU&t=743s， Vaccination Database Tech Talks 这个系列有很多干货， 每期一个系统；
 
-	- starrocks, 从它的发展路径看， 有很多学clickhoues的影子；
+	- Starrocks, 从它的发展路径看， 有很多学clickhoues的影子；
 
-	- velox, 近期facebook对presto的c++重写版本，还快速迭代中， 可以关注看看， 肯定会有向量化相关的地方, Orri Erling这个人好像挺牛的，是下面这篇文章的作者之一；
+	- Velox, 近期facebook对presto的c++重写版本，还快速迭代中， 可以关注看看， 肯定会有向量化相关的地方, Orri Erling参与其中， 这个人好像挺牛的，是下面这篇文章的作者之一；
 		- TPC-H Analyzed: Hidden Messages and Lessons Learned from an Infuential Benchmark, 这篇论文的作者非常牛，AP方向上，这篇论文在内部也是被研究的很多；
 
 	- MonetDB/VectorWise，CWI，践行列存储和向量化先行者，snowflake的创始人就有来自CWI的， 目前snowflake也是走的这个路线，应该还没有codegen;
