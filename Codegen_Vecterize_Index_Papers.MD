@@ -11,8 +11,7 @@
 	- MonetDB/VectorWise，CWI，践行列存储和向量化先行者，snowflake的创始人就有来自CWI的， 目前snowflake也是走的这个路线，应该还没有codegen;
 		- 2005-MonetDB-MonetDB/X100- Hyper-Pipelining Query Execution
 
-	- Spark photon, 去年spark搞的c++向量化引擎，据说性能好，去年打榜口水战，spark从codegen这条路走到了向量化
-		- https://docs.databricks.com/runtime/photon.html
+	- Spark photon, 去年spark搞的c++向量化引擎，据说性能好，去年打榜口水战，spark从codegen这条路走到了向量化 https://docs.databricks.com/runtime/photon.html
 
 - Codegen，
 	- 德国慕尼黑工业大学
@@ -44,29 +43,31 @@
 
 
 # 索引
-	- b+树索引，还是各大数据库的标配，历史悠久，开源实现，https://panthema.net/2007/stx-btree/， kudu的实现等，历史原因，btree是面向磁盘， 所以在全内存的对比场景， 它对cache的考虑不足， 可能比ART这样的考虑不够，导致它在内存越来越大的今天有点吃亏， 但一个好的b+tree设计依然可以做到很均衡的性能；
-	- ART索引， hyper使用的索引，基数树，性能很大， 点查性能， range查询比不上btree；
-		- The Adaptive Radix Tree: ARTful Indexing for Main-Memory Databases；
-		- 对ART后续的一些改进；
-			- 2018-HOT- A Height Optimized Trie Index for Main-Memory Database Systems
-			- START – Self-Tuning Adaptive Radix Tree
-	- Masstree， B+tree和Ties的结合
-		- 貌似hologress使用了这个；
-		- 有一些开源实现， 比如 https://github.com/rmind/masstree
-	- BW-Tree, 微软
-		- 2013-Bw-tree-Microsoft-The Bw-Tree-A B-tree for New Hardware Platforms 
-		- 2018-Building a Bw-Tree Takes More Than Just Buzz Words CMU的论文，有个开源的open bwtree实现， 性能一般， 目前没有特别好的实现，要么微软的论文并没有把insight讲出来？
+- b+树索引，还是各大数据库的标配，历史悠久，开源实现，https://panthema.net/2007/stx-btree/， kudu的实现等，历史原因，btree是面向磁盘， 所以在全内存的对比场景， 它对cache的考虑不足， 可能比ART这样的考虑不够，导致它在内存越来越大的今天有点吃亏， 但一个好的b+tree设计依然可以做到很均衡的性能；
+	
+- ART索引， hyper使用的索引，基数树，性能很大， 点查性能， range查询比不上btree；
+	- The Adaptive Radix Tree: ARTful Indexing for Main-Memory Databases；
+	- 对ART后续的一些改进；
+		- 2018-HOT- A Height Optimized Trie Index for Main-Memory Database Systems
+		- START – Self-Tuning Adaptive Radix Tree
+- Masstree， B+tree和Ties的结合
+	- 貌似hologress使用了这个；
+	- 有一些开源实现， 比如 https://github.com/rmind/masstree
+- BW-Tree, 微软
+	- 2013-Bw-tree-Microsoft-The Bw-Tree-A B-tree for New Hardware Platforms 
+	- 2018-Building a Bw-Tree Takes More Than Just Buzz Words CMU的论文，有个开源的open bwtree实现， 性能一般， 目前没有特别好的实现，要么微软的论文并没有把insight讲出来？
 
-	- 这个项目可以不错，它的论文其实一开始是对learned index和传统的数据库索引进行benchmark, 但其中几乎把所有的内存索引都加进去做比较 https://github.com/learnedsystems/SOSD
+- 这个项目可以不错，它的论文其实一开始是对learned index和传统的数据库索引进行benchmark, 但其中几乎把所有的内存索引都加进去做比较 https://github.com/learnedsystems/SOSD
 
-	- LSM
-		- 学术界，2016-Wisconsin-WiscKey Separating Keys from Values in SSD-conscious Storage, 大value分离， rocksdb已经继承进去;
-		- 学术界，2020-From WiscKey to Bourbon- A Learned Index for Log-Structured Merge Trees，讲的使用ML来提升查询效率
-		- 工业界：cochroachdb的实现， https://github.com/cockroachdb/pebble ， 用go写， 因为coachroachdb的go runtime用rocksdb比较蛋疼， tidb好像也有自己的实现？
-		- 工业界：字节的terarkdb, 收购来的，做了很多优化，从index到remote compact之类的，https://github.com/bytedance/terarkdb， 后来terark的创始人出走了， 搞了topling, 也是基于rocksdb改， https://github.com/topling/toplingdb
+- LSM
+	- 学术界，2016-Wisconsin-WiscKey Separating Keys from Values in SSD-conscious Storage, 大value分离， rocksdb已经继承进去;
+	- 学术界，2020-From WiscKey to Bourbon- A Learned Index for Log-Structured Merge Trees，讲的使用ML来提升查询效率
+	- 工业界：cochroachdb的实现， https://github.com/cockroachdb/pebble ， 用go写， 因为coachroachdb的go runtime用rocksdb比较蛋疼， tidb好像也有自己的实现？
+	- 工业界：字节的terarkdb, 收购来的，做了很多优化，从index到remote compact之类的，https://github.com/bytedance/terarkdb， 后来terark的创始人出走了， 搞了topling, 也是基于rocksdb改， https://github.com/topling/toplingdb
+
 
 # 其他
-	- 综述性的论文，随便看看；
-		- 2021-The Future Is Big Graphs- A Community View on Graph Processing Systems
-		- 2021-Demystifying Graph Databases-Analysis and Taxonomy of Data Organization, System Designs, and Graph Queries
+- 综述性的论文，随便看看；
+	- 2021-The Future Is Big Graphs- A Community View on Graph Processing Systems
+	- 2021-Demystifying Graph Databases-Analysis and Taxonomy of Data Organization, System Designs, and Graph Queries
 
