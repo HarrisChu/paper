@@ -17,6 +17,7 @@
 	- 德国慕尼黑工业大学
 		- 他们之前的系统Hyper的runtime使用了基于LLVM的技术
 			- 2011-Hyper-Compiler-Efficiently Compiling Efficient Query Plans for Modern Hardware
+				- An algebraic operator is a pipeline breaker for a given input side if it takes an incoming tuple out of the CPU registers.
 		- 后来他们又做了Umbra，迭代开发compile时间更短的方法， 论文
 			- 2020-Umbra-Compiler-Tidy Tuples and Flying Start Fast Compilation and Fast Execution of Relational Queries in Umbra，编译时间只需要几毫秒，使用asmjit直接产出x86机器码， 相较于LLVM的快很多， 而且做到执行计划Flying start, 即开始是解释执行，等编译就绪了，无缝切换编译执行；
 			- 2021-Umbra-Compiler-Building Advanced SQL Analytics From Low-Level Plan Operators；
