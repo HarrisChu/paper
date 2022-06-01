@@ -46,7 +46,7 @@
 # 索引
 - b+树索引，还是各大数据库的标配，历史悠久，开源实现，https://panthema.net/2007/stx-btree/， kudu的实现等，历史原因，btree是面向磁盘， 所以在全内存的对比场景， 它对cache的考虑不足， 可能比ART这样的考虑不够，导致它在内存越来越大的今天有点吃亏， 但一个好的b+tree设计依然可以做到很均衡的性能；
 	
-- ART索引， hyper使用的索引，基数树，性能很大， 点查性能， range查询比不上btree；
+- ART索引， hyper使用的索引，基数树，点查性能非常好，内存占用小，range查询比不上btree；
 	- The Adaptive Radix Tree: ARTful Indexing for Main-Memory Databases；
 	- 对ART后续的一些改进；
 		- 2018-HOT- A Height Optimized Trie Index for Main-Memory Database Systems
